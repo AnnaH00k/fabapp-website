@@ -27,18 +27,20 @@ const TONE_CAPTION: Record<StoryTone, string> = {
 };
 
 export default function StoryChapter({ data }: { data: StoryChapterData }) {
-  const { number, title, description, tone, images } = data;
+  const { number, kicker, title, description, tone, images } = data;
 
   return (
     <section data-tone={tone} className={`py-24 ${TONE_TEXT[tone]}`}>
-      <div className="relative z-10 mx-auto max-w-6xl px-6">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 text-center">
         <p className={`font-mono text-xs tracking-[0.2em] uppercase ${TONE_KICKER[tone]}`}>
-          {number} — {title}
+          {number} — {kicker}
         </p>
         <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
-        <p className={`mt-4 max-w-2xl text-lg ${TONE_DESCRIPTION[tone]}`}>{description}</p>
+        <p className={`mx-auto mt-4 max-w-2xl text-left text-lg ${TONE_DESCRIPTION[tone]}`}>
+          {description}
+        </p>
 
-        <div className="mt-12 flex flex-wrap gap-8">
+        <div className="mt-12 flex flex-wrap justify-center gap-8">
           {images.map((image) => (
             <figure key={image.src} className="w-48 sm:w-56 md:w-64">
               <div className="overflow-hidden rounded-[2rem] ring-1 ring-white/40 shadow-xl">

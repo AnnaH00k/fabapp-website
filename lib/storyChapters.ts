@@ -7,6 +7,7 @@ export type StoryImage = {
 
 export type StoryChapterData = {
   number: string;
+  kicker: string;
   title: string;
   description: string;
   tone: StoryTone;
@@ -16,6 +17,7 @@ export type StoryChapterData = {
 export const storyChapters: StoryChapterData[] = [
   {
     number: "01",
+    kicker: "Erste Schritte in der App",
     title: "Ankommen",
     description:
       "Nach dem Start siehst du sofort deinen Lernfortschritt und findest über das Menü jeden Bereich der App in Sekunden.",
@@ -27,6 +29,7 @@ export const storyChapters: StoryChapterData[] = [
   },
   {
     number: "02",
+    kicker: "Vier Prüfungsfächer abgedeckt",
     title: "Fragenkataloge verwalten",
     description:
       "Nutze die vorgefertigten Kataloge zu allen 4 Prüfungsfächern oder leg dir eigene an — inklusive eigener Fragen und der Möglichkeit, Kataloge mit anderen zu teilen.",
@@ -40,6 +43,7 @@ export const storyChapters: StoryChapterData[] = [
   },
   {
     number: "03",
+    kicker: "Der Freitext-Modus",
     title: "Frei antworten & verstehen",
     description:
       "Beantworte Fragen in eigenen Worten, vergleiche mit der Musterlösung und schätze selbst ein, ob du richtig lagst. Quellen sind direkt verlinkt, und passt eine Frage mal nicht, meldest du sie mit einem Tipp.",
@@ -55,6 +59,7 @@ export const storyChapters: StoryChapterData[] = [
   },
   {
     number: "04",
+    kicker: "Schnell und kompakt üben",
     title: "Multiple-Choice-Modus",
     description:
       "Wer es kompakter mag, übt im Multiple-Choice-Modus — mit sofortiger Auswertung und Erklärung zu jeder Antwortoption.",
@@ -66,6 +71,7 @@ export const storyChapters: StoryChapterData[] = [
   },
   {
     number: "05",
+    kicker: "Deine Lernstatistik",
     title: "Fortschritt im Blick",
     description:
       "Lernzeit, Erfolgsquote und Fortschritt je Fragenkatalog — alles übersichtlich nach Tag, Woche, Monat oder Jahr auswertbar.",
@@ -77,6 +83,7 @@ export const storyChapters: StoryChapterData[] = [
   },
   {
     number: "06",
+    kicker: "Für die praktische Prüfung",
     title: "Praxis & Training",
     description:
       "Trag Prüfungsleistungen ein und lass dir Note und Punktzahl automatisch berechnen, oder halte dein Schwimmtraining im Trainingstagebuch fest.",
@@ -89,6 +96,7 @@ export const storyChapters: StoryChapterData[] = [
   },
   {
     number: "07",
+    kicker: "Individuell einstellbar",
     title: "Alles im Griff",
     description:
       "Stelle die Lernintervalle individuell ein und nimm deinen kompletten Fortschritt beim Gerätewechsel per Backup einfach mit.",

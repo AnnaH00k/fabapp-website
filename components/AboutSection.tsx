@@ -7,7 +7,9 @@ export default function AboutSection() {
         <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-navy text-xl font-bold text-white">
           AH
         </div>
-        <p className="font-mono text-xs tracking-[0.2em] text-navy/60 uppercase">08 — Über mich</p>
+        <p className="font-mono text-xs tracking-[0.2em] text-navy/60 uppercase">
+          08 — Wer steckt dahinter
+        </p>
         <h2 className="mt-3 text-4xl font-bold tracking-tight text-navy sm:text-5xl">
           {about.title}
         </h2>

@@ -8,7 +8,7 @@ export default function FlyerSection() {
       <div className="relative z-10 mx-auto grid max-w-5xl items-center gap-10 px-6 md:grid-cols-[1fr_auto]">
         <div>
           <p className="font-mono text-xs tracking-[0.2em] text-blue-light/70 uppercase drop-shadow-[0_1px_4px_rgba(20,28,60,0.5)]">
-            09 — Flyer
+            09 — Zum Aushängen und Teilen
           </p>
           <h2 className="mt-3 text-4xl font-bold tracking-tight text-white drop-shadow-[0_1px_6px_rgba(20,28,60,0.6)] sm:text-5xl">
             {flyer.title}
@@ -35,9 +35,9 @@ export default function FlyerSection() {
             className="rounded-lg bg-white p-2"
           />
           <p className="text-center text-xs text-blue-light/70">
-            QR-Code zum Scannen
+            QR-Code 
             <br />
-            für den Flyer
+            zur Webseite
           </p>
         </div>
       </div>
