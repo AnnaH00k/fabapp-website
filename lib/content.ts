@@ -26,24 +26,6 @@ export const examSubjects = [
 export const heroClosing =
   "Zudem lassen sich auch eigene Kataloge erstellen und mit anderen teilen.";
 
-export const heroSectionTitle = "Was zeichnet die FABapp aus?";
-
-export const features = [
-  {
-    title: "Fertige Kataloge",
-    description: "Bereit, dich für die Abschlussprüfung vorzubereiten.",
-  },
-  {
-    title: "Eigene Kataloge",
-    description: "Kataloge selbst erstellen und bearbeiten.",
-  },
-  {
-    title: "Kataloge Teilen",
-    description:
-      "Kataloge als .txt herunterladen, teilen und per Dateiauswahl importieren.",
-  },
-];
-
 export const about = {
   title: "Über mich",
   paragraphs: [

@@ -1,22 +1,24 @@
 import Hero from "@/components/Hero";
-import FeaturesSection from "@/components/FeaturesSection";
+import StoryChapter from "@/components/StoryChapter";
 import AboutSection from "@/components/AboutSection";
 import FlyerSection from "@/components/FlyerSection";
 import FeedbackSection from "@/components/FeedbackSection";
-import WaveDivider from "@/components/WaveDivider";
+import FluidBackground from "@/components/FluidBackground";
+import WaterFluidCursor from "@/components/WaterFluidCursor";
+import { storyChapters } from "@/lib/storyChapters";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative isolate">
+      <FluidBackground />
+      <WaterFluidCursor />
       <Hero />
-      <WaveDivider backFill="fill-blue-light/80" frontFill="fill-blue-mid/70" />
-      <FeaturesSection />
-      <WaveDivider backFill="fill-blue-mid/70" frontFill="fill-blue-light" />
+      {storyChapters.map((chapter) => (
+        <StoryChapter key={chapter.number} data={chapter} />
+      ))}
       <AboutSection />
-      <WaveDivider backFill="fill-blue-light" frontFill="fill-navy" height="h-28 md:h-36" />
       <FlyerSection />
-      <WaveDivider backFill="fill-navy" frontFill="fill-blue-mid/70" height="h-28 md:h-36" />
       <FeedbackSection />
-    </>
+    </div>
   );
 }

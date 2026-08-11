@@ -24,28 +24,3 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
-
-/* Seamless looping wave animation: track is duplicated 2x width, slides -50% */
-@keyframes wave-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-wave-slow {
-  animation: wave-scroll 26s linear infinite;
-}
-
-.animate-wave-fast {
-  animation: wave-scroll 14s linear infinite reverse;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-wave-slow,
-  .animate-wave-fast {
-    animation: none;
-  }
-}

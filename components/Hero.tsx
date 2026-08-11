@@ -7,19 +7,20 @@ export default function Hero() {
   return (
     <section
       id="download"
-      className="relative overflow-hidden bg-gradient-to-b from-blue-light to-blue-mid/70 pt-16 pb-24 md:pt-24"
+      data-tone="light"
+      className="relative overflow-hidden pt-20 pb-32 md:pt-28"
     >
       <DecorativeBubbles />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
         <div>
-          <p className="text-sm font-semibold tracking-wide text-navy/60 uppercase">
-            Lern-App für Fachangestellte für Bäderbetriebe
+          <p className="font-mono text-xs tracking-[0.2em] text-navy/60 uppercase">
+            00 — Lern-App für Fachangestellte für Bäderbetriebe
           </p>
-          <h1 className="mt-3 text-5xl font-extrabold tracking-tight text-navy sm:text-6xl">
+          <h1 className="mt-4 text-6xl font-extrabold tracking-tight text-navy sm:text-7xl">
             {site.name}
           </h1>
-          <p className="mt-4 text-lg font-medium text-navy/90">{site.tagline}</p>
+          <p className="mt-5 text-lg font-medium text-navy/90">{site.tagline}</p>
 
           <div className="mt-6 space-y-3 text-navy/80">
             <p>{heroParagraphs[0]}</p>
@@ -49,10 +50,10 @@ export default function Hero() {
         <div className="relative mx-auto w-full max-w-xs md:max-w-sm">
           <div className="absolute -inset-8 -z-10 rounded-full bg-blue-mid/40 blur-3xl" />
           <Image
-            src={withBasePath("/images/screenshot-fertige-kataloge.png")}
-            alt="FABapp Startbildschirm mit Lernfortschritt"
-            width={900}
-            height={1505}
+            src={withBasePath("/images/screenshotsApp/01-willkommen.png")}
+            alt="Willkommensbildschirm der FABapp"
+            width={1440}
+            height={3120}
             priority
             className="mx-auto w-full rotate-2 rounded-[2.5rem] drop-shadow-2xl transition duration-500 hover:rotate-0"
           />

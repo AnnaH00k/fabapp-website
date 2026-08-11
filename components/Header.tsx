@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-blue-mid/40 bg-blue-light/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-extrabold tracking-tight text-navy">
+        <Link href="/" className="text-2xl font-extrabold tracking-tight text-navy">
           FABapp
         </Link>
 
@@ -26,7 +26,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-navy/80 transition hover:text-navy"
+              className="text-sm font-medium tracking-wide text-navy/80 uppercase transition hover:text-navy"
             >
               {item.label}
             </Link>
