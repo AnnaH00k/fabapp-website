@@ -4,16 +4,18 @@ import { withBasePath } from "@/lib/paths";
 
 export default function FlyerSection() {
   return (
-    <section id="flyer" data-tone="dark" className="py-32 text-blue-light">
+    <section id="flyer" data-tone="dark" className="relative py-32 text-blue-light">
+      <div className="absolute inset-0 z-5 bg-navy-dark/70 backdrop-blur-md" aria-hidden="true" />
+
       <div className="relative z-10 mx-auto grid max-w-5xl items-center gap-10 px-6 md:grid-cols-[1fr_auto]">
         <div>
-          <p className="font-mono text-xs tracking-[0.2em] text-blue-light/70 uppercase drop-shadow-[0_1px_4px_rgba(20,28,60,0.5)]">
+          <p className="font-mono text-xs tracking-[0.2em] text-blue-light/70 uppercase">
             09 — Zum Aushängen und Teilen
           </p>
-          <h2 className="mt-3 text-4xl font-bold tracking-tight text-white drop-shadow-[0_1px_6px_rgba(20,28,60,0.6)] sm:text-5xl">
+          <h2 className="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">
             {flyer.title}
           </h2>
-          <p className="mt-4 max-w-xl text-blue-light/85 drop-shadow-[0_1px_4px_rgba(20,28,60,0.5)] sm:text-lg">
+          <p className="mt-4 max-w-xl text-blue-light/85 sm:text-lg">
             {flyer.body}
           </p>
           <a

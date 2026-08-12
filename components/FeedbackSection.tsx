@@ -2,15 +2,17 @@ import { feedback, site } from "@/lib/content";
 
 export default function FeedbackSection() {
   return (
-    <section id="feedback" data-tone="mid" className="py-32">
+    <section id="feedback" data-tone="mid" className="relative py-32">
+      <div className="absolute inset-0 z-5 bg-white/90 backdrop-blur-sm" aria-hidden="true" />
+
       <div className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-        <p className="font-mono text-xs tracking-[0.2em] text-navy/60 uppercase drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)]">
+        <p className="font-mono text-xs tracking-[0.2em] text-navy/60 uppercase">
           10 — Kontakt
         </p>
-        <h2 className="mt-3 text-4xl font-bold tracking-tight text-navy drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] sm:text-5xl">
+        <h2 className="mt-3 text-4xl font-bold tracking-tight text-navy sm:text-5xl">
           {feedback.title}
         </h2>
-        <p className="mt-4 text-navy/80 drop-shadow-[0_1px_3px_rgba(255,255,255,0.5)] sm:text-lg">
+        <p className="mt-4 text-navy/80 sm:text-lg">
           {feedback.body}
         </p>
         <a

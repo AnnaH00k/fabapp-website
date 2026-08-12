@@ -25,10 +25,10 @@ export const heroClosing =
   "Zudem lassen sich auch eigene Kataloge erstellen und mit anderen teilen.";
 
 export const about = {
-  title: "Über mich",
+  title: "Über die Entwicklerin",
   paragraphs: [
     "Ich habe meine Ausbildung zur Fachangestellten für Bäderbetriebe 2021 erfolgreich abgeschlossen. Im Laufe meiner Ausbildung befasste ich mich immer wieder damit, wie es am einfachsten wäre, die Bandbreite des Wissens am einfachsten zu vermitteln und vor allem auch selbstständig zu lernen.",
-    "Häufig ist es jedoch schwer, ohne Hilfe an Dinge heranzugehen, deshalb erschuf ich diese App, um anderen und auch mir selbst das Lernen zu erleichtern. Zurzeit studiere ich Informatik und gebe mein Bestes, meine Fähigkeiten in der App-Gestaltung zu verbessern – über Tipps, Wünsche und Ratschläge bin ich immer dankbar.",
+    "Häufig ist es jedoch schwer, ohne Hilfe an Dinge heranzugehen, deshalb erschuf ich diese App, um anderen und auch mir selbst das Lernen zu erleichtern. Nach 3 Jahren Informatik Studium bin ich nun teilzeit zurück im Job und gebe nebenbei mein Bestes, meine Fähigkeiten in der App-Gestaltung zu verbessern – über Tipps, Wünsche und Ratschläge bin ich immer dankbar.",
   ],
 };
 
@@ -77,7 +77,7 @@ export const appInfo = {
 
 export const flyer = {
   title: "Flyer herunterladen",
-  body: "Du arbeitest in einem Bad oder bildest Fachangestellte für Bäderbetriebe aus? Lade den Flyer herunter und leg ihn bei euch im Betrieb aus – damit alle Azubis von der FABapp erfahren.",
+  body: "Du arbeitest in einem Bad oder bildest Fachangestellte für Bäderbetriebe aus? Lade den Flyer herunter und leg ihn bei euch im Betrieb aus – damit alle Azubis von der FABapp profitieren.",
   fileName: "FlyerFABapp2026_final.pdf",
   href: withBasePath("/flyer/FlyerFABapp2026_final.pdf"),
   heroHint: "Ausdrucken und im Bad aushängen.",

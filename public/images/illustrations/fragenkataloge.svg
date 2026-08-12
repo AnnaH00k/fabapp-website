@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <g transform="rotate(-12 200 210)">
+    <rect x="95" y="70" width="210" height="270" rx="28" fill="#9dade0" />
+  </g>
+  <g transform="rotate(7 200 210)">
+    <rect x="95" y="70" width="210" height="270" rx="28" fill="#dbe7fd" stroke="#1e2c61" stroke-width="3" />
+  </g>
+  <rect x="95" y="70" width="210" height="270" rx="28" fill="#ffffff" stroke="#1e2c61" stroke-width="4" />
+
+  <rect x="122" y="104" width="110" height="16" rx="8" fill="#1e2c61" />
+  <rect x="122" y="132" width="70" height="10" rx="5" fill="#9dade0" />
+
+  <rect x="122" y="176" width="20" height="20" rx="6" fill="#dbe7fd" stroke="#1e2c61" stroke-width="2.5" />
+  <path d="M127 186l4 4 8-8" stroke="#1e2c61" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="154" y="180" width="120" height="12" rx="6" fill="#e6edfb" />
+
+  <rect x="122" y="212" width="20" height="20" rx="6" fill="#dbe7fd" stroke="#1e2c61" stroke-width="2.5" />
+  <path d="M127 222l4 4 8-8" stroke="#1e2c61" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  <rect x="154" y="216" width="100" height="12" rx="6" fill="#e6edfb" />
+
+  <rect x="122" y="248" width="20" height="20" rx="6" fill="#dbe7fd" stroke="#1e2c61" stroke-width="2.5" />
+  <rect x="154" y="252" width="130" height="12" rx="6" fill="#e6edfb" />
+
+  <circle cx="288" cy="96" r="36" fill="#1e2c61" />
+  <text x="288" y="93" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">1378</text>
+  <text x="288" y="109" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#dbe7fd">Fragen</text>
+</svg>

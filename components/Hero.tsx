@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-2">
         <div>
           <p className="font-mono text-xs tracking-[0.2em] text-navy/60 uppercase">
-            00 — Lern-App für Fachangestellte für Bäderbetriebe
+            Lern-App für Fachangestellte für Bäderbetriebe
           </p>
           <h1 className="mt-4 text-6xl font-extrabold tracking-tight text-navy sm:text-7xl">
             {site.name}
@@ -48,7 +48,7 @@ export default function Hero() {
           className="relative mx-auto block w-full max-w-xs md:max-w-sm"
         >
           <div className="absolute -inset-8 -z-10 rounded-full bg-blue-mid/40 blur-3xl" />
-          <div className="relative  aspect-210/297 w-full rotate-2 drop-shadow-2xl transition duration-500 hover:rotate-0">
+          <div className="relative aspect-210/297 w-full drop-shadow-2xl">
             <Image
               src={withBasePath("/images/flyerVorschau.svg")}
               alt="Vorschau des FABapp-Flyers"

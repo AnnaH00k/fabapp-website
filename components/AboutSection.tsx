@@ -1,12 +1,20 @@
+import Image from "next/image";
 import { about, site } from "@/lib/content";
+import { withBasePath } from "@/lib/paths";
 
 export default function AboutSection() {
   return (
-    <section id="ueber-mich" data-tone="light" className="py-32">
+    <section id="ueber-mich" data-tone="light" className="relative py-32">
+      <div className="absolute inset-0 z-5 bg-white/70 backdrop-blur-md" aria-hidden="true" />
+
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-navy text-xl font-bold text-white">
-          AH
-        </div>
+        <Image
+          src={withBasePath("/images/entwicklerin.jpg")}
+          alt={site.repoOwnerName}
+          width={96}
+          height={96}
+          className="mx-auto mb-6 h-16 w-16 rounded-full object-cover ring-2 ring-navy/20"
+        />
         <h2 className="mt-3 text-4xl font-bold tracking-tight text-navy sm:text-5xl">
           {about.title}
         </h2>
