@@ -48,7 +48,7 @@ export default function Hero() {
           className="relative mx-auto block w-full max-w-xs md:max-w-sm"
         >
           <div className="absolute -inset-8 -z-10 rounded-full bg-blue-mid/40 blur-3xl" />
-          <div className="relative aspect-210/297 w-full drop-shadow-2xl">
+          <div className="relative aspect-210/297 w-full rounded-2xl shadow-2xl">
             <Image
               src={withBasePath("/images/flyerVorschau.svg")}
               alt="Vorschau des FABapp-Flyers"
