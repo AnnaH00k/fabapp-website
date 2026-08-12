@@ -12,8 +12,6 @@ export const site = {
 
 export const heroParagraphs = [
   "Begleitend zur Ausbildung kannst du dich ideal mit der App auf die Abschlussprüfung vorbereiten.",
-  "Im Berufsalltag kannst du dein Wissen auffrischen.",
-  "Mit vorgefertigten Fragenkatalogen überprüfst du dein Wissen in den 4 Prüfungsfächern:",
 ];
 
 export const examSubjects = [
@@ -80,6 +78,7 @@ export const appInfo = {
 export const flyer = {
   title: "Flyer herunterladen",
   body: "Du arbeitest in einem Bad oder bildest Fachangestellte für Bäderbetriebe aus? Lade den Flyer herunter und leg ihn bei euch im Betrieb aus – damit alle Azubis von der FABapp erfahren.",
-  fileName: "FlyerFABapp2026_hell.pdf",
-  href: withBasePath("/flyer/FlyerFABapp2026_hell.pdf"),
+  fileName: "FlyerFABapp2026_final.pdf",
+  href: withBasePath("/flyer/FlyerFABapp2026_final.pdf"),
+  heroHint: "Ausdrucken und im Bad aushängen.",
 };

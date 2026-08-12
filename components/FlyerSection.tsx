@@ -28,7 +28,7 @@ export default function FlyerSection() {
 
         <div className="mx-auto flex flex-col items-center gap-3 rounded-2xl bg-blue-light/10 p-5 ring-1 ring-blue-light/20">
           <Image
-            src={withBasePath("/images/qr-code.png")}
+            src={withBasePath("/images/QRFABApp_NEW.png")}
             alt="QR-Code zur FABapp-Webseite"
             width={160}
             height={160}

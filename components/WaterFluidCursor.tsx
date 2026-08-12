@@ -43,12 +43,9 @@ export default function WaterFluidCursor() {
     setEnabled(true);
   }, [prefersReducedMotion]);
 
-  const initializedRef = useRef(false);
-
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!enabled || !canvas || initializedRef.current) return;
-    initializedRef.current = true;
+    if (!enabled || !canvas) return;
 
     let cancelled = false;
     import("webgl-fluid").then(({ default: WebGLFluid }) => {
@@ -70,16 +67,55 @@ export default function WaterFluidCursor() {
       });
     });
 
+    const lastPointerActivity = { current: Date.now() };
+    const auto = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    let target = { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight };
+
     const forwardPointer = (event: PointerEvent) => {
+      lastPointerActivity.current = Date.now();
+      auto.x = event.clientX;
+      auto.y = event.clientY;
       canvas.dispatchEvent(
         new MouseEvent("mousemove", { clientX: event.clientX, clientY: event.clientY }),
       );
     };
     window.addEventListener("pointermove", forwardPointer);
 
+    // px/s — deliberately slow so the auto-wander reads as a gentle, ambient
+    // drift rather than something visibly "driving" the cursor around.
+    const IDLE_THRESHOLD_MS = 2000;
+    const AUTO_SPEED = 100;
+    let autoFrame: number;
+    let lastFrameTime = performance.now();
+
+    const autoWander = (time: number) => {
+      autoFrame = requestAnimationFrame(autoWander);
+      const dt = (time - lastFrameTime) / 1000;
+      lastFrameTime = time;
+
+      if (Date.now() - lastPointerActivity.current < IDLE_THRESHOLD_MS) return;
+
+      const dx = target.x - auto.x;
+      const dy = target.y - auto.y;
+      const dist = Math.hypot(dx, dy);
+      if (dist < 4) {
+        target = { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight };
+        return;
+      }
+
+      const step = Math.min(dist, AUTO_SPEED * dt);
+      auto.x += (dx / dist) * step;
+      auto.y += (dy / dist) * step;
+      canvas.dispatchEvent(
+        new MouseEvent("mousemove", { clientX: auto.x, clientY: auto.y }),
+      );
+    };
+    autoFrame = requestAnimationFrame(autoWander);
+
     return () => {
       cancelled = true;
       window.removeEventListener("pointermove", forwardPointer);
+      cancelAnimationFrame(autoFrame);
     };
   }, [enabled]);
 
