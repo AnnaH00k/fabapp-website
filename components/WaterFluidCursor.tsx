@@ -11,11 +11,12 @@ const SPLAT_COLOR = { r: 0.52, g: 0.6, b: 0.8 };
 
 /**
  * Full-viewport WebGL fluid simulation (via the `webgl-fluid` package, a
- * dependency-free ESM port of PavelDoGreat's classic sim) reacting to the
- * pointer, tinted to the brand palette for a "water" feel instead of the
- * usual multicolor smoke. Disabled for touch/coarse pointers, missing WebGL
- * support, and prefers-reduced-motion (component renders nothing in those
- * cases).
+ * dependency-free ESM port of PavelDoGreat's classic sim), tinted to the
+ * brand palette for a "water" feel instead of the usual multicolor smoke.
+ * Disabled for missing WebGL support and prefers-reduced-motion (component
+ * renders nothing in those cases). Direct cursor interaction only responds
+ * to real mouse movement; touch devices still get the slow ambient
+ * auto-wander motion, just without being driven by touch input.
  *
  * The canvas has to stay `pointer-events-none` so it never blocks clicks on
  * real content underneath it (it's a full-page overlay). webgl-fluid binds
@@ -30,7 +31,6 @@ export default function WaterFluidCursor() {
 
   useEffect(() => {
     if (prefersReducedMotion) return;
-    if (!window.matchMedia("(pointer: fine)").matches) return;
 
     const probe = document.createElement("canvas");
     const hasWebGL = !!(
@@ -72,6 +72,7 @@ export default function WaterFluidCursor() {
     let target = { x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight };
 
     const forwardPointer = (event: PointerEvent) => {
+      if (event.pointerType !== "mouse") return;
       lastPointerActivity.current = Date.now();
       auto.x = event.clientX;
       auto.y = event.clientY;
