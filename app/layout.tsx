@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Deine Lern-App für den Beruf Fachangestellte für Bäderbetriebe. Bereite dich mit Fragenkatalogen ideal auf die Abschlussprüfung vor.",
   icons: {
-    icon: withBasePath("/images/icon-source.png"),
+    icon: withBasePath("/images/FABappLogo.png"),
     apple: withBasePath("/images/apple-touch-icon.png"),
   },
 };
